@@ -101,3 +101,198 @@ pixabay API는 **무료**이고, 개인 API KEY가 공개된다고 해서 큰 �
 개인 API Key와 엮인 Rate Limit이 존재하므로, 개인 API Key가 노출되지 않도록 본 과제는 별도의 배포된 데모 페이지 없이 진행합니다.
 
 따라서 데모 페이지는 강의 영상 또는 [2.답안 코드 확인하기](https://github.com/hanameee/wallpaper-search-engine/tree/answer#2-%EB%8B%B5%EC%95%88-%EC%BD%94%EB%93%9C-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0)를 참고해 개인 로컬 개발 환경에서 직접 확인해주세요.
+
+```
+wallpaper-search-engine
+├─ .git
+│  ├─ config
+│  ├─ description
+│  ├─ HEAD
+│  ├─ hooks
+│  │  ├─ applypatch-msg.sample
+│  │  ├─ commit-msg.sample
+│  │  ├─ fsmonitor-watchman.sample
+│  │  ├─ post-update.sample
+│  │  ├─ pre-applypatch.sample
+│  │  ├─ pre-commit.sample
+│  │  ├─ pre-merge-commit.sample
+│  │  ├─ pre-push.sample
+│  │  ├─ pre-rebase.sample
+│  │  ├─ pre-receive.sample
+│  │  ├─ prepare-commit-msg.sample
+│  │  ├─ push-to-checkout.sample
+│  │  └─ update.sample
+│  ├─ index
+│  ├─ info
+│  │  └─ exclude
+│  ├─ logs
+│  │  ├─ HEAD
+│  │  └─ refs
+│  │     ├─ heads
+│  │     │  └─ main
+│  │     └─ remotes
+│  │        └─ origin
+│  │           └─ HEAD
+│  ├─ objects
+│  │  ├─ info
+│  │  └─ pack
+│  │     ├─ pack-1be675aebd414ee3f0661cac2ccc5fbd9913417e.idx
+│  │     └─ pack-1be675aebd414ee3f0661cac2ccc5fbd9913417e.pack
+│  ├─ packed-refs
+│  └─ refs
+│     ├─ heads
+│     │  └─ main
+│     ├─ remotes
+│     │  └─ origin
+│     │     └─ HEAD
+│     └─ tags
+├─ .gitignore
+├─ .prettierignore
+├─ .prettierrc.json
+├─ .vscode
+│  └─ settings.json
+├─ package-lock.json
+├─ package.json
+├─ public
+│  └─ index.html
+├─ README.md
+├─ src
+│  ├─ api
+│  │  ├─ getWallPapers.js
+│  │  └─ request.js
+│  ├─ App.css
+│  ├─ App.js
+│  ├─ asset
+│  │  ├─ dark.svg
+│  │  ├─ delete.svg
+│  │  ├─ dummyData.js
+│  │  ├─ light.svg
+│  │  ├─ like.svg
+│  │  ├─ next.svg
+│  │  ├─ prev.svg
+│  │  ├─ save.svg
+│  │  └─ search.svg
+│  ├─ component
+│  │  ├─ EmptyResult.js
+│  │  ├─ Footer.js
+│  │  ├─ Hero.js
+│  │  ├─ ImageCard.js
+│  │  ├─ ImageModal.js
+│  │  ├─ Pagination.js
+│  │  ├─ ResultContainer.js
+│  │  ├─ Search.js
+│  │  ├─ SearchOption.js
+│  │  ├─ SearchTag.js
+│  │  └─ ToggleThemeButton.js
+│  ├─ index.css
+│  ├─ index.js
+│  └─ styles
+│     └─ fonts
+│        ├─ NotoSansKR-Black.otf
+│        ├─ NotoSansKR-Bold.otf
+│        ├─ NotoSansKR-Light.otf
+│        ├─ NotoSansKR-Medium.otf
+│        ├─ NotoSansKR-Regular.otf
+│        └─ NotoSansKR-Thin.otf
+└─ yarn.lock
+
+```
+```
+wallpaper-search-engine
+├─ .git
+│  ├─ config
+│  ├─ description
+│  ├─ HEAD
+│  ├─ hooks
+│  │  ├─ applypatch-msg.sample
+│  │  ├─ commit-msg.sample
+│  │  ├─ fsmonitor-watchman.sample
+│  │  ├─ post-update.sample
+│  │  ├─ pre-applypatch.sample
+│  │  ├─ pre-commit.sample
+│  │  ├─ pre-merge-commit.sample
+│  │  ├─ pre-push.sample
+│  │  ├─ pre-rebase.sample
+│  │  ├─ pre-receive.sample
+│  │  ├─ prepare-commit-msg.sample
+│  │  ├─ push-to-checkout.sample
+│  │  └─ update.sample
+│  ├─ index
+│  ├─ info
+│  │  └─ exclude
+│  ├─ logs
+│  │  ├─ HEAD
+│  │  └─ refs
+│  │     ├─ heads
+│  │     │  └─ main
+│  │     └─ remotes
+│  │        └─ origin
+│  │           └─ HEAD
+│  ├─ objects
+│  │  ├─ info
+│  │  └─ pack
+│  │     ├─ pack-1be675aebd414ee3f0661cac2ccc5fbd9913417e.idx
+│  │     └─ pack-1be675aebd414ee3f0661cac2ccc5fbd9913417e.pack
+│  ├─ packed-refs
+│  └─ refs
+│     ├─ heads
+│     │  └─ main
+│     ├─ remotes
+│     │  └─ origin
+│     │     └─ HEAD
+│     └─ tags
+├─ .gitignore
+├─ .prettierignore
+├─ .prettierrc.json
+├─ .vscode
+│  └─ settings.json
+├─ package-lock.json
+├─ package.json
+├─ public
+│  └─ index.html
+├─ README.md
+├─ src
+│  ├─ api
+│  │  ├─ getWallPapers.js
+│  │  └─ request.js
+│  ├─ App.css
+│  ├─ App.js
+│  ├─ asset
+│  │  ├─ dark.svg
+│  │  ├─ delete.svg
+│  │  ├─ dummyData.js
+│  │  ├─ light.svg
+│  │  ├─ like.svg
+│  │  ├─ next.svg
+│  │  ├─ prev.svg
+│  │  ├─ save.svg
+│  │  └─ search.svg
+│  ├─ component
+│  │  ├─ EmptyResult.js
+│  │  ├─ Footer.js
+│  │  ├─ Hero.js
+│  │  ├─ Image
+│  │  │  ├─ ImageCard.js
+│  │  │  ├─ ImageModal.js
+│  │  │  └─ ResultContainer.js
+│  │  ├─ Pagination.js
+│  │  ├─ Search
+│  │  │  ├─ Search.js
+│  │  │  ├─ SearchOption.js
+│  │  │  └─ SearchTag.js
+│  │  ├─ Title.js
+│  │  └─ ToggleThemeButton.js
+│  ├─ index.css
+│  ├─ index.js
+│  └─ styles
+│     └─ fonts
+│        ├─ NotoSansKR-Black.otf
+│        ├─ NotoSansKR-Bold.otf
+│        ├─ NotoSansKR-Light.otf
+│        ├─ NotoSansKR-Medium.otf
+│        ├─ NotoSansKR-Regular.otf
+│        └─ NotoSansKR-Thin.otf
+├─ tsconfig.json
+└─ yarn.lock
+
+```

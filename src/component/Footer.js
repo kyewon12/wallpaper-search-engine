@@ -8,11 +8,7 @@ const FooterContainer = styled.div`
 `;
 
 const Footer = () => {
-    return (
-        <FooterContainer>
-            ©2022 Hanameee Corp. All rights reserved.
-        </FooterContainer>
-    );
+    return <FooterContainer>©2023 kim kye won.</FooterContainer>;
 };
 
 export default Footer;

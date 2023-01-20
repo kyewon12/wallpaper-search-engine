@@ -1,13 +1,26 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: Noto light;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    font-family: Noto light;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: Noto light, source-code-pro, Menlo, Monaco, Consolas,
+        'Courier New', monospace;
+}
+
+@font-face {
+    font-family: 'Noto light';
+    font-weight: 300;
+    src: url('./styles/fonts/NotoSansKR-Light.otf') format('woff2'),
+        url('./styles/fonts/NotoSansKR-Light.otf') format('woff'),
+        url('./styles/fonts/NotoSansKR-Light.otf') format('truetype');
 }
